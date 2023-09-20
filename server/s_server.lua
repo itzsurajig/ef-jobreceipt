@@ -35,6 +35,61 @@ AddEventHandler('ef-jobreceipt:Server:ApplyPoliceForm', function(name, age, numb
         )
 end)
 
+
+-- RegisterServerEvent('ef-jobreceipt:Server:ApplyPoliceForm')
+-- AddEventHandler('ef-jobreceipt:Server:ApplyPoliceForm', function(cname, vname, cid, upgradeoption, upcost, repairoption, rcost, customoption, custcost, mname)
+--     PoliceFormWebhook (
+--         "**Customer Name:** " .. cname ..
+--         "\n" ..
+--         "\n" ..
+--         "**Vehicle Name:** " .. vname ..
+--         "\n" ..
+--         "\n" ..
+--         "**Customer Citizen ID:** " .. cid ..
+--         "\n" ..
+--         "\n" ..
+--         "**Have the Customer Upgrade Their Vehicle ?** " .. upgradeoption ..
+--         "\n" ..
+--         "\n" ..
+--         "**Vehicle Upgrade Cost:** " .. upcost ..
+--         "\n" ..
+--         "\n" ..
+--         "**Have the Customer Repair Their Vehicle ?** " .. repairoption ..
+--         "\n" ..
+--         "\n" ..
+--         "**Vehicle Repair Cost:** " .. rcost ..
+--         "\n" ..
+--         "\n" ..
+--         "**Have the Customer Customize Their Vehicle ?** " .. customoption ..
+--         "\n" ..
+--         "\n" ..
+--         "**Vehicle Customize Cost:** " .. custcost .. 
+--         "\n" ..
+--         "Mechainc Name: " .. mname 
+--         )
+-- end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 -- RegisterServerEvent('ef-jobreceipt:Server:ApplyAmbulanceForm')
 -- AddEventHandler('ef-jobreceipt:Server:ApplyAmbulanceForm', function(name, age, number, aboutyou, weapons, emergencyjob)
 --     AmbulanceFormWebhook (

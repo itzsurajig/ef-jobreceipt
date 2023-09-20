@@ -60,20 +60,37 @@ AddEventHandler('ef-jobreceipt:Client:OpenForm', function(form)
     if form == "police" then
         -- if Config.Menus == "qb" then
             local dialog = exports["qb-input"]:ShowInput({
-                header = " PDM Form",
-                submitText = "Submit Form",
+                header = " PDM",
+                submitText = "UPLOAD",
                 inputs = {
                     { text = "Seller Name",                               name = "name",          type = "text",  isRequired = true,  },
                     { text = "Buyer Name",                                name = "age",           type = "text",  isRequired = true,  },
                     { text = "Buyer Citizen ID",                               name = "aboutyou",      type = "text",  isRequired = true,  },
                     { text = "Vehicle Number",                             name = "number",        type = "text",  isRequired = true,  },
                     { text = "Selling Price",                               name = "sellingprice",      type = "text",  isRequired = true,  },
-                    { text = "Vehicle Image",                               name = "vehicleimg",      type = "text",  isRequired = true,  },
+                    { text = "Vehicle Image",                               name = "vehicleimg",      type = "url",  isRequired = true,  },
                     { text = "Have the Buyer Finance The Vehicle ?",      name = "finance",       type = "select", options = {  { value = "yes", text = "Yes" }, { value = "no", text = "No" }, } },
                     { text = "Finance Down Payment",                               name = "financedownpay",      type = "text",  isRequired = true,  },
                     -- { text = "Have you ever worked an emergency job?",  name = "emergencyjob",  type = "select", options = {  { value = "yes", text = "Yes" }, { value = "no", text = "No" }, } },
                 },
             })
+
+            -- local dialog = exports["qb-input"]:ShowInput({
+            --     header = "Mechanic",
+            --     submitText = "UPLOAD",
+            --     inputs = {
+            --         { text = "Customer Name",                               name = "cname",          type = "text",  isRequired = true,  },
+            --         { text = "Vehicle Name",                                name = "vname",           type = "text",  isRequired = true,  },
+            --         { text = "Customer Citizen ID",                               name = "cid",      type = "text",  isRequired = true,  },
+            --         { text = "Have the Customer Upgrade Their Vehicle ?",                             name = "upgradeoption",        type = "select",  options = {  { value = "yes", text = "Yes" }, { value = "no", text = "No" }, } },
+            --         { text = "Vehicle Upgrade Cost",                               name = "upcost",      type = "text",  isRequired = true,  },
+            --         { text = "Have the Customer Repair Their Vehicle ?",                               name = "repairoption",      type = "select",  options = {  { value = "yes", text = "Yes" }, { value = "no", text = "No" }, } },
+            --         { text = "Vehicle Repair Cost",      name = "rcost",       type = "text", isRequired = true,  },
+            --         { text = "Have the Customer Customize Their Vehicle ?",                               name = "customoption",      type = "select",  options = {  { value = "yes", text = "Yes" }, { value = "no", text = "No" }, } },
+            --         { text = "Vehicle Customize Cost",                               name = "custcost",      type = "text",  isRequired = true,  },
+            --         { text = "Mechainc Name",                               name = "mname",      type = "text",  isRequired = true,  },
+            --     },
+            -- })
 
             if dialog then
                 if Config.Emotes == "dpemotes" then TriggerEvent('animations:client:EmoteCommandStart', {Config.Animation}) elseif Config.Emotes == "rpemotes" then exports["rpemotes"]:EmoteCommandStart(Config.Animation) else print("Missing or write wrong on: Config.Emotes") end
@@ -88,9 +105,51 @@ AddEventHandler('ef-jobreceipt:Client:OpenForm', function(form)
                     end
                     if Config.Emotes == "dpemotes" then TriggerEvent('animations:client:EmoteCommandStart', {"c"}) elseif Config.Emotes == "rpemotes" then exports["rpemotes"]:EmoteCommandStart("c") else print("Missing or write wrong on: Config.Emotes") end
                     if Config.SendEmail then Email(form) end
-                    TriggerServerEvent('ef-jobreceipt:Server:ApplyPoliceForm', dialog.name, dialog.age, dialog.number, dialog.aboutyou, dialog.sellingprice, dialog.vehicleimg, dialog.finance, dialog.financedownpay)
+                    TriggerServerEvent('ef-jobreceipt:Server:ApplyPoliceForm', dialog.cname, dialog.vname, dialog.cid, dialog.upgradeoption, dialog.upcost, dialog.repairoption, dialog.rcost, dialog.customoption, dialog.custcost, dialog.mname)
                 end)
             end
+
+
+
+        -- else form == "mechanic" then
+        --     -- if Config.Menus == "qb" then
+        --         local dialog = exports["qb-input"]:ShowInput({
+        --             header = " PDM",
+        --             submitText = "UPLOAD",
+        --             inputs = {
+        --                 { text = "Seller Name",                               name = "name",          type = "text",  isRequired = true,  },
+        --                 { text = "Buyer Name",                                name = "age",           type = "text",  isRequired = true,  },
+        --                 { text = "Buyer Citizen ID",                               name = "aboutyou",      type = "text",  isRequired = true,  },
+        --                 { text = "Vehicle Number",                             name = "number",        type = "text",  isRequired = true,  },
+        --                 { text = "Selling Price",                               name = "sellingprice",      type = "text",  isRequired = true,  },
+        --                 { text = "Vehicle Image",                               name = "vehicleimg",      type = "text",  isRequired = true,  },
+        --                 { text = "Have the Buyer Finance The Vehicle ?",      name = "finance",       type = "select", options = {  { value = "yes", text = "Yes" }, { value = "no", text = "No" }, } },
+        --                 { text = "Finance Down Payment",                               name = "financedownpay",      type = "text",  isRequired = true,  },
+        --                 -- { text = "Have you ever worked an emergency job?",  name = "emergencyjob",  type = "select", options = {  { value = "yes", text = "Yes" }, { value = "no", text = "No" }, } },
+        --             },
+        --         })
+    
+        --         if dialog then
+        --             if Config.Emotes == "dpemotes" then TriggerEvent('animations:client:EmoteCommandStart', {Config.Animation}) elseif Config.Emotes == "rpemotes" then exports["rpemotes"]:EmoteCommandStart(Config.Animation) else print("Missing or write wrong on: Config.Emotes") end
+        --             QBCore.Functions.Progressbar("writingPoliceForm", "Uploading to server...", Config.Time, false, true, {
+        --                 disableMovement = true, 
+        --                 disableCarMovement = true, 
+        --                 disableMouse = false, 
+        --                 disableCombat = true, 
+        --             }, {}, {}, {}, function()  
+        --                 if Config.SendEmail then
+        --                     Email(form)
+        --                 end
+        --                 if Config.Emotes == "dpemotes" then TriggerEvent('animations:client:EmoteCommandStart', {"c"}) elseif Config.Emotes == "rpemotes" then exports["rpemotes"]:EmoteCommandStart("c") else print("Missing or write wrong on: Config.Emotes") end
+        --                 if Config.SendEmail then Email(form) end
+        --                 TriggerServerEvent('ef-jobreceipt:Server:ApplyPoliceForm', dialog.name, dialog.age, dialog.number, dialog.aboutyou, dialog.sellingprice, dialog.vehicleimg, dialog.finance, dialog.financedownpay)
+        --             end)
+        --         end
+
+
+
+
+
         -- elseif Config.Menus == "ox" then
         --     local input = lib.inputDialog("Police Form", {
         --         { type = 'input',        label = 'Your Name',            description = 'Write your name here',               required = true, icon = 'hashtag' },
