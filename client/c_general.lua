@@ -70,7 +70,7 @@ AddEventHandler('ef-jobreceipt:Client:OpenForm', function(form)
                     { text = "Selling Price",                               name = "sellingprice",      type = "text",  isRequired = true,  },
                     { text = "Vehicle Image",                               name = "vehicleimg",      type = "text",  isRequired = true,  },
                     { text = "Have the Buyer Finance The Vehicle ?",      name = "finance",       type = "select", options = {  { value = "yes", text = "Yes" }, { value = "no", text = "No" }, } },
-                    -- { text = "Have you ever worked with weapons?",      name = "weapons",       type = "select", options = {  { value = "yes", text = "Yes" }, { value = "no", text = "No" }, } },
+                    { text = "Finance Down Payment",                               name = "financedownpay",      type = "text",  isRequired = true,  },
                     -- { text = "Have you ever worked an emergency job?",  name = "emergencyjob",  type = "select", options = {  { value = "yes", text = "Yes" }, { value = "no", text = "No" }, } },
                 },
             })
@@ -88,7 +88,7 @@ AddEventHandler('ef-jobreceipt:Client:OpenForm', function(form)
                     end
                     if Config.Emotes == "dpemotes" then TriggerEvent('animations:client:EmoteCommandStart', {"c"}) elseif Config.Emotes == "rpemotes" then exports["rpemotes"]:EmoteCommandStart("c") else print("Missing or write wrong on: Config.Emotes") end
                     if Config.SendEmail then Email(form) end
-                    TriggerServerEvent('ef-jobreceipt:Server:ApplyPoliceForm', dialog.name, dialog.age, dialog.number, dialog.aboutyou, dialog.sellingprice, dialog.vehicleimg, dialog.finance)
+                    TriggerServerEvent('ef-jobreceipt:Server:ApplyPoliceForm', dialog.name, dialog.age, dialog.number, dialog.aboutyou, dialog.sellingprice, dialog.vehicleimg, dialog.finance, dialog.financedownpay)
                 end)
             end
         -- elseif Config.Menus == "ox" then

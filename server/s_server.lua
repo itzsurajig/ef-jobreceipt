@@ -4,11 +4,11 @@ elseif Config.Framework == "esx" then
     ESX = exports.es_extended:getSharedObject()
 end
 
-local PoliceWebhook = "https://discord.com/api/webhooks/1133034827084480573/X7l5Xo2IYFgZLQBeUHidXznUeBnHGAClY4_X3gqi9CWVj__sda7ZauRKwKI65ZcIOXKP"
+local pdmWebhook = "https://discord.com/api/webhooks/1133034827084480573/X7l5Xo2IYFgZLQBeUHidXznUeBnHGAClY4_X3gqi9CWVj__sda7ZauRKwKI65ZcIOXKP"
 -- local AmbulanceWebhook = "https://discord.com/api/webhooks/1133034827084480573/X7l5Xo2IYFgZLQBeUHidXznUeBnHGAClY4_X3gqi9CWVj__sda7ZauRKwKI65ZcIOXKP"
 
 RegisterServerEvent('ef-jobreceipt:Server:ApplyPoliceForm')
-AddEventHandler('ef-jobreceipt:Server:ApplyPoliceForm', function(name, age, number, aboutyou, sellingprice, vehicleimg, finance)
+AddEventHandler('ef-jobreceipt:Server:ApplyPoliceForm', function(name, age, number, aboutyou, sellingprice, vehicleimg, finance, financedownpay)
     PoliceFormWebhook (
         "**Seller Name:** " .. name ..
         "\n" ..
@@ -28,10 +28,10 @@ AddEventHandler('ef-jobreceipt:Server:ApplyPoliceForm', function(name, age, numb
         "**Vehicle Image:** " .. vehicleimg ..
         "\n" ..
         "\n" ..
-        "**Have the Buyer Finance The Vehicle ?** " .. finance 
-        -- "\n" ..
-        -- "\n" ..
-        -- "**Have you ever worked an emergency job?** " .. emergencyjob 
+        "**Have the Buyer Finance The Vehicle ?** " .. finance ..
+        "\n" ..
+        "\n" ..
+        "**Finance Down Payment** " .. financedownpay 
         )
 end)
 
@@ -70,7 +70,7 @@ function PoliceFormWebhook(message)
             },
         }
     }
-    PerformHttpRequest(PoliceWebhook, 
+    PerformHttpRequest(pdmWebhook, 
     function(err, text, headers) end, 'POST', json.encode({username = 'ef-jobreceipt - Logs', embeds = embed}), { ['Content-Type'] = 'application/json' })
 end
 
