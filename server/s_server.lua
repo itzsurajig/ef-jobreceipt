@@ -8,24 +8,21 @@ local pdmWebhook = "https://discord.com/api/webhooks/1133034827084480573/X7l5Xo2
 -- local AmbulanceWebhook = "https://discord.com/api/webhooks/1133034827084480573/X7l5Xo2IYFgZLQBeUHidXznUeBnHGAClY4_X3gqi9CWVj__sda7ZauRKwKI65ZcIOXKP"
 
 RegisterServerEvent('ef-jobreceipt:Server:ApplyPoliceForm')
-AddEventHandler('ef-jobreceipt:Server:ApplyPoliceForm', function(name, age, number, aboutyou, sellingprice, vehicleimg, finance, financedownpay)
+AddEventHandler('ef-jobreceipt:Server:ApplyPoliceForm', function(sname, bname, bcitizenid, vnumber, sellingprice, finance, financedownpay)
     PoliceFormWebhook (
-        "**Seller Name:** " .. name ..
+        "**Seller Name:** " .. sname ..
         "\n" ..
         "\n" ..
-        "**Buyer Name:** " .. age ..
+        "**Buyer Name:** " .. bname ..
         "\n" ..
         "\n" ..
-        "**Buyer Citizen ID:** " .. aboutyou ..
+        "**Buyer Citizen ID:** " .. bcitizenid ..
         "\n" ..
         "\n" ..
-        "**Vehicle Number:** " .. number ..
+        "**Vehicle Number:** " .. vnumber ..
         "\n" ..
         "\n" ..
         "**Selling Price:** " .. sellingprice ..
-        "\n" ..
-        "\n" ..
-        "**Vehicle Image:** " .. vehicleimg ..
         "\n" ..
         "\n" ..
         "**Have the Buyer Finance The Vehicle ?** " .. finance ..

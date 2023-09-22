@@ -23,3 +23,5 @@ Config.Locations = {
     --    Form = "mechanic",
     --},
 }
+
+Config.PDM = vector3(-56.86, -1096.98, 26.42)
