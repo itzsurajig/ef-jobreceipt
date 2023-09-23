@@ -14,6 +14,7 @@ server_script {
 
 client_script {
     "client/**.lua",
+    "client/exports.js",
 }
 
 lua54 'yes'

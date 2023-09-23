@@ -136,21 +136,23 @@ end)
 --         )
 -- end)
 
+
+--pdm webhook
 function PDMWebhook(message)
     local embed = {}
     embed = {
         {
             ["color"] = 65280, -- GREEN = 65280 --- RED = 16711680
-            ["title"] = "EF-AntiCheat - PDM | Seller",
+            ["title"] = "PDM | Sales Logs",
             ["description"] = "" .. message ..  "",
             ["footer"] = {
                 ["icon_url"] = "https://cdn.discordapp.com/attachments/1007717270241427516/1018449348633305108/Ef_productions.gif",
-                ["text"] = 'ef-seller',
+                ["text"] = 'ef-jobreceipt',
             },
         }
     }
     PerformHttpRequest(Config.PDMWebhook, 
-    function(err, text, headers) end, 'POST', json.encode({username = 'ef-jobreceipt - Logs', embeds = embed}), { ['Content-Type'] = 'application/json' })
+    function(err, text, headers) end, 'POST', json.encode({username = 'ef-jobreceipt - PDM Logs', embeds = embed}), { ['Content-Type'] = 'application/json' })
 end
 
 ---MECHANIC
@@ -164,10 +166,19 @@ function MechanicWebhook(message)
             ["description"] = "" .. message ..  "",
             ["footer"] = {
                 ["icon_url"] = "https://cdn.discordapp.com/attachments/1007717270241427516/1018449348633305108/Ef_productions.gif",
-                ["text"] = 'ef-seller',
+                ["text"] = 'ef-jobreceipt',
             },
         }
     }
     PerformHttpRequest(Config.MechanicWebhook, 
     function(err, text, headers) end, 'POST', json.encode({username = 'ef-jobreceipt - Logs', embeds = embed}), { ['Content-Type'] = 'application/json' })
 end
+
+
+
+--- useable item
+
+
+-- QBCore.Functions.CreateUseableItem('tablet' , function(source, item)
+--         TriggerClientEvent('ef-jobreceipt:Client:OpenFormPDM', source)
+-- end)

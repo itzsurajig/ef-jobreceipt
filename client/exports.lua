@@ -14,6 +14,7 @@ exports['qb-target']:AddBoxZone("pdm", Config.PDM, 1.45, 1.35, {
 			icon = "fas fa-sign-in-alt",
 			label = "Open",
 			job = "cardealer",
+			-- item = "tablet",
 		},
 	},
 	distance = 2.5
