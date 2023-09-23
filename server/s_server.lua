@@ -9,25 +9,26 @@ end
 RegisterServerEvent('ef-jobreceipt:Server:UploadPDM')
 AddEventHandler('ef-jobreceipt:Server:UploadPDM', function(sname, bname, bcitizenid, vnumber, sellingprice, finance, financedownpay)
     PDMWebhook (
-        "**Seller Name:** " .. sname ..
+        "```Seller Name: " .. sname ..
         "\n" ..
         "\n" ..
-        "**Buyer Name:** " .. bname ..
+        "Buyer Name: " .. bname ..
         "\n" ..
         "\n" ..
-        "**Buyer Citizen ID:** " .. bcitizenid ..
+        "Buyer Citizen ID: " .. bcitizenid ..
         "\n" ..
         "\n" ..
-        "**Vehicle Number:** " .. vnumber ..
+        "Vehicle Number: " .. vnumber ..
         "\n" ..
         "\n" ..
-        "**Selling Price:** " .. sellingprice ..
+        "Selling Price: " .. sellingprice ..
         "\n" ..
         "\n" ..
-        "**Have the Buyer Finance The Vehicle ?** " .. finance ..
+        "Have the Buyer Finance The Vehicle ? " .. finance ..
         "\n" ..
         "\n" ..
-        "**Finance Down Payment** " .. financedownpay 
+        "Finance Down Payment " .. financedownpay ..
+        "```\n"
         )
 end)
 
