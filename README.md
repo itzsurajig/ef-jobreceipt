@@ -17,4 +17,4 @@ Configurable Options: The script is highly configurable.
 
 # Dependencies
 
-[ox_lib](https://github.com/overextended/ox_lib)
+(ox_lib)[https://github.com/overextended/ox_lib/releases/tag/v3.10.0]
