@@ -1,4 +1,4 @@
-QBCore = exports["qb-core"]:GetCoreObject()
+QBCore = exports[Config.Corename]:GetCoreObject()
 
 --start
 --pdm
@@ -12,7 +12,7 @@ AddEventHandler('ef-jobreceipt:Client:ReceiptPDM', function(form)
                 { type = 'input',        label = 'Vehicle Number',            description = 'Write vehicle number plate here',     required = true, icon = 'fas fa-car' },
                 { type = 'number',        label = 'Selling Price', description = 'Write vehicle selling price here',        required = true, icon = 'fas fa-dollar-sign' },
                 { type = 'input',        label = 'Have the Buyer Finance The Vehicle ?',    description = '( Yes or No )', required = true, icon = 'fa-question-circle' },
-                { type = 'number',        label = 'Finance Down Payment',            description = 'Write the down payment here',     required = true, icon = 'fas fa-dollar-sign' },
+                { type = 'number',        label = 'Finance Down Payment',            description = 'Write the down payment here',     required = false, icon = 'fas fa-dollar-sign' },
             })
         if input then
             if Config.Emotes == "dpemotes" then TriggerEvent('animations:client:EmoteCommandStart', {"tablet2"}) elseif Config.Emotes == "rpemotes" then exports["rpemotes"]:EmoteCommandStart("tablet2") else print("Missing or write wrong on: Config.Emotes") end
@@ -75,7 +75,7 @@ AddEventHandler('ef-jobreceipt:Client:ReceiptEDM', function(form)
                 { type = 'input',        label = 'Vehicle Number',            description = 'Write vehicle number plate here',     required = true, icon = 'fas fa-car' },
                 { type = 'number',        label = 'Selling Price', description = 'Write vehicle selling price here',        required = true, icon = 'fas fa-dollar-sign' },
                 { type = 'input',        label = 'Have the Buyer Finance The Vehicle ?',    description = '( Yes or No )', required = true, icon = 'fa-question-circle' },
-                { type = 'number',        label = 'Finance Down Payment',            description = 'Write the down payment here',     required = true, icon = 'fas fa-dollar-sign' },
+                { type = 'number',        label = 'Finance Down Payment',            description = 'Write the down payment here',     required = false, icon = 'fas fa-dollar-sign' },
             })
         if input then
             if Config.Emotes == "dpemotes" then TriggerEvent('animations:client:EmoteCommandStart', {"tablet2"}) elseif Config.Emotes == "rpemotes" then exports["rpemotes"]:EmoteCommandStart("tablet2") else print("Missing or write wrong on: Config.Emotes") end
@@ -95,6 +95,7 @@ AddEventHandler('ef-jobreceipt:Client:ReceiptEDM', function(form)
             end
 end)
 
+print("^2cfx.reMonitor ^2EF^7-^2Optimization ^2Script Made By- ^1EF-PRODUCTIONS^7 ^2 ^1https://discord.gg/WbDp5GQ45t^1")
 
         
 

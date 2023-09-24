@@ -1,6 +1,4 @@
-QBCore = exports["qb-core"]:GetCoreObject()
-
-
+QBCore = exports[Config.Corename]:GetCoreObject()
 --pdm
 RegisterServerEvent('ef-jobreceipt:Server:UploadPDM')
 AddEventHandler('ef-jobreceipt:Server:UploadPDM', function(sname, bname, bcitizenid, vnumber, sellingprice, finance, financedownpay)
@@ -79,8 +77,6 @@ AddEventHandler('ef-jobreceipt:Server:UploadEDM', function(sname, bname, bcitize
         "```\n"
         )
 end)
-
-
 --pdm webhook
 function PDMWebhook(message)
     local embed = {}
@@ -98,7 +94,6 @@ function PDMWebhook(message)
     PerformHttpRequest(Config.PDMWebhook, 
     function(err, text, headers) end, 'POST', json.encode({username = 'ef-jobreceipt - PDM Logs', embeds = embed}), { ['Content-Type'] = 'application/json' })
 end
-
 ---MECHANIC
 function MechanicWebhook(message)
     local embed = {}
@@ -116,7 +111,6 @@ function MechanicWebhook(message)
     PerformHttpRequest(Config.MechanicWebhook, 
     function(err, text, headers) end, 'POST', json.encode({username = 'ef-jobreceipt - Mechanic Logs', embeds = embed}), { ['Content-Type'] = 'application/json' })
 end
-
 --EDM webhook
 function EDMWebhook(message)
     local embed = {}
@@ -135,4 +129,4 @@ function EDMWebhook(message)
     function(err, text, headers) end, 'POST', json.encode({username = 'ef-jobreceipt - EDM Logs', embeds = embed}), { ['Content-Type'] = 'application/json' })
 end
 
-
+print("^2cfx.reMonitor ^2EF^7-^2JobReceipt ^2Script Made By- ^1BlasterSuraj^7 ^2 ^1https://discord.gg/WbDp5GQ45t^1")

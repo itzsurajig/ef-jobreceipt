@@ -1,5 +1,4 @@
 --- pdm
-
 exports['qb-target']:AddBoxZone("pdm", Config.PDM.Location, 2.45, 2.35, {
 	name = "pdm",
 	heading = Config.PDM.heading,
@@ -20,7 +19,6 @@ exports['qb-target']:AddBoxZone("pdm", Config.PDM.Location, 2.45, 2.35, {
 })
 
 --- mechanic
-
 exports['qb-target']:AddBoxZone("mechanic", Config.Mechanic.Location, 2.45, 2.35, {
 	name = "mechanic",
 	heading = Config.Mechanic.heading,
@@ -41,7 +39,6 @@ exports['qb-target']:AddBoxZone("mechanic", Config.Mechanic.Location, 2.45, 2.35
 })
 
 -- edm
-
 exports['qb-target']:AddBoxZone("edm", Config.EDM.Location, 2.45, 2.35, {
 	name = "edm",
 	heading = Config.EDM.heading,

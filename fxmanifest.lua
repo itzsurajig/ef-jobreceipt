@@ -2,23 +2,24 @@ fx_version 'cerulean'
 author 'BlasterSuraj'
 Description 'ef-jobreceipt'
 game 'gta5'
+lua54 'yes'
 
 shared_scripts {
     "@ox_lib/init.lua",
-    "config/**",
+    "config.lua",
 }
+
 
 server_script {
     "server/**.lua",
 }
 
+
 client_script {
     "client/**.lua",
 }
 
-lua54 'yes'
-
 
 escrow_ignore {
-    'config/*.lua',
+    'config.lua',
 }
