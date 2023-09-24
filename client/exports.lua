@@ -1,20 +1,19 @@
 --- pdm
 
-exports['qb-target']:AddBoxZone("pdm", Config.PDM, 1.45, 1.35, {
+exports['qb-target']:AddBoxZone("pdm", Config.PDM.Location, 2.45, 2.35, {
 	name = "pdm",
-	heading = 219.08,
-	debugPoly = false,
-    minZ = 24.332054138184,
-    maxZ = 30.332054138184,
+	heading = Config.PDM.heading,
+	debugPoly = Config.debug,
+    minZ = Config.PDM.minZ,
+    maxZ = Config.PDM.maxZ,
 }, {
 	options = {
 		{
             type = "client",
-            event = 'ef-jobreceipt:Client:OpenFormPDM',
+            event = 'ef-jobreceipt:Client:ReceiptPDM',
 			icon = "fas fa-sign-in-alt",
 			label = "Open",
-			job = "cardealer",
-			-- item = "tablet",
+			job = Config.PDM.job,
 		},
 	},
 	distance = 2.5
@@ -22,20 +21,41 @@ exports['qb-target']:AddBoxZone("pdm", Config.PDM, 1.45, 1.35, {
 
 --- mechanic
 
-exports['qb-target']:AddBoxZone("mechanic", Config.Mechanic, 1.45, 1.35, {
+exports['qb-target']:AddBoxZone("mechanic", Config.Mechanic.Location, 2.45, 2.35, {
 	name = "mechanic",
-	heading = 219.08,
-	debugPoly = false,
-    minZ = 36.932434082031,
-    maxZ = 42.932434082031,
+	heading = Config.Mechanic.heading,
+	debugPoly = Config.debug,
+    minZ = Config.Mechanic.minZ,
+    maxZ = Config.Mechanic.maxZ,
 }, {
 	options = {
 		{
             type = "client",
-            event = 'ef-jobreceipt:Client:OpenFormMechanic',
+            event = 'ef-jobreceipt:Client:ReceiptMechanic',
 			icon = "fas fa-sign-in-alt",
 			label = "Open",
-			job = "mechanic",
+			job = Config.Mechanic.job,
+		},
+	},
+	distance = 2.5
+})
+
+-- edm
+
+exports['qb-target']:AddBoxZone("edm", Config.EDM.Location, 2.45, 2.35, {
+	name = "edm",
+	heading = Config.EDM.heading,
+	debugPoly = Config.debug,
+    minZ = Config.EDM.minZ,
+    maxZ = Config.EDM.maxZ,
+}, {
+	options = {
+		{
+            type = "client",
+            event = 'ef-jobreceipt:Client:ReceiptEDM',
+			icon = "fas fa-sign-in-alt",
+			label = "Open",
+			job = Config.EDM.job,
 		},
 	},
 	distance = 2.5

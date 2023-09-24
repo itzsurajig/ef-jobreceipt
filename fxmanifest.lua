@@ -1,5 +1,5 @@
 fx_version 'cerulean'
-author 'm-Scripts | https://marcinhu.tebex.io/'
+author 'BlasterSuraj'
 Description 'ef-jobreceipt'
 game 'gta5'
 
@@ -14,7 +14,11 @@ server_script {
 
 client_script {
     "client/**.lua",
-    "client/exports.js",
 }
 
 lua54 'yes'
+
+
+escrow_ignore {
+    'config/*.lua',
+}
