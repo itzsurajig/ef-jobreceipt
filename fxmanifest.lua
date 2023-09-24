@@ -1,6 +1,9 @@
 fx_version 'cerulean'
 author 'BlasterSuraj'
 Description 'ef-jobreceipt'
+version '1.0.0'
+discord 'https://discord.gg/WbDp5GQ45t'
+scriptname 'ef-jobreceipt'
 game 'gta5'
 lua54 'yes'
 
