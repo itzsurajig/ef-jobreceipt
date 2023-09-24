@@ -16,6 +16,6 @@ Configurable Options: The script is highly configurable.
 
 
 # Dependencies
-<h1>[ox_lib](https://github.com/overextended/ox_lib/releases)</h1><br>
+<h1>ox_lib ➤ https://github.com/overextended/ox_lib/releases</h1><br>
 
-<h1>[Discord](https://discord.gg/WbDp5GQ45t)</h1><br> 
+<h1>Discord ➤ https://discord.gg/WbDp5GQ45t</h1><br> 
