@@ -6,13 +6,13 @@ RegisterNetEvent('ef-jobreceipt:Client:ReceiptPDM')
 AddEventHandler('ef-jobreceipt:Client:ReceiptPDM', function(form)
     local playerPed = PlayerPedId()
             local input = lib.inputDialog("PDM", {
-                { type = 'input',        label = 'Seller Name',            description = 'Write your name here',               required = true, icon = 'fa-user' },
-                { type = 'input',        label = 'Buyer Name',             description = 'Write buyer name here',                required = true, icon = 'fa-user' },
-                { type = 'input',        label = 'Buyer Citizen ID',          description = 'Write buyer Citizen ID here',             required = true, icon = 'fa-id-card' },
-                { type = 'input',        label = 'Vehicle Number',            description = 'Write vehicle number plate here',     required = true, icon = 'fas fa-car' },
+                { type = 'input',        label = 'Seller Name',  description = 'Write your name here',               required = true, icon = 'fa-user' },
+                { type = 'input',        label = 'Buyer Name',  description = 'Write buyer name here',                required = true, icon = 'fa-user' },
+                { type = 'input',        label = 'Buyer Citizen ID',  description = 'Write buyer Citizen ID here',             required = true, icon = 'fa-id-card' },
+                { type = 'input',        label = 'Vehicle Number',  description = 'Write vehicle number plate here',     required = true, icon = 'fas fa-car' },
                 { type = 'number',        label = 'Selling Price', description = 'Write vehicle selling price here',        required = true, icon = 'fas fa-dollar-sign' },
-                { type = 'input',        label = 'Have the Buyer Finance The Vehicle ?',    description = '( Yes or No )', required = true, icon = 'fa-question-circle' },
-                { type = 'number',        label = 'Finance Down Payment',            description = 'Write the down payment here',     required = false, icon = 'fas fa-dollar-sign' },
+                { type = 'input',        label = 'Have the Buyer Finance The Vehicle ?',  description = '( Yes or No )', required = true, icon = 'fa-question-circle' },
+                { type = 'number',        label = 'Finance Down Payment',  description = 'Write the down payment here',     required = false, icon = 'fas fa-dollar-sign' },
             })
         if input then
             if Config.Emotes == "dpemotes" then TriggerEvent('animations:client:EmoteCommandStart', {"tablet2"}) elseif Config.Emotes == "rpemotes" then exports["rpemotes"]:EmoteCommandStart("tablet2") else print("Missing or write wrong on: Config.Emotes") end
