@@ -95,7 +95,4 @@ AddEventHandler('ef-jobreceipt:Client:ReceiptEDM', function(form)
             end
 end)
 
-print("^2cfx.reMonitor ^2EF^7-^2Optimization ^2Script Made By- ^1EF-PRODUCTIONS^7 ^2 ^1https://discord.gg/WbDp5GQ45t^1")
-
-        
-
+--print("^2cfx.reMonitor ^2EF^7-^2Optimization ^2Script Made By- ^1EF-PRODUCTIONS^7 ^2 ^1https://discord.gg/WbDp5GQ45t^1")
