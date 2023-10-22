@@ -3,7 +3,7 @@ QBCore = exports[Config.Corename]:GetCoreObject()
 --start
 --pdm
 RegisterNetEvent('ef-jobreceipt:Client:ReceiptPDM')
-AddEventHandler('ef-jobreceipt:Client:ReceiptPDM', function(form)
+AddEventHandler('ef-jobreceipt:Client:ReceiptPDM',
     local playerPed = PlayerPedId()
             local input = lib.inputDialog("PDM", {
                 { type = 'input',        label = 'Seller Name',  description = 'Write your name here',               required = true, icon = 'fa-user' },
@@ -28,13 +28,15 @@ AddEventHandler('ef-jobreceipt:Client:ReceiptPDM', function(form)
             })
             if Config.Emotes == "dpemotes" then TriggerEvent('animations:client:EmoteCommandStart', {"c"}) elseif Config.Emotes == "rpemotes" then exports["rpemotes"]:EmoteCommandStart("c") else print("Missing or write wrong on: Config.Emotes") end
             TriggerServerEvent('ef-jobreceipt:Server:UploadPDM', input[1], input[2], input[3], input[4], input[5], input[6], input[7])
+            TriggerServerEvent('ef-reciept:surajprint', dialog)
             QBCore.Functions.Notify('Uploading Done', 'success')
             end
 end)
 
+
 ---mechanic
 RegisterNetEvent('ef-jobreceipt:Client:ReceiptMechanic')
-AddEventHandler('ef-jobreceipt:Client:ReceiptMechanic', function(form)
+AddEventHandler('ef-jobreceipt:Client:ReceiptMechanic',
     local playerPed = PlayerPedId()
     local input = lib.inputDialog("Mechanic", {
         { type = 'input',        label = 'Customer Name',            description = 'Write customer name here',               required = true, icon = 'fa-user' },
@@ -66,7 +68,7 @@ end)
 
 --EDM
 RegisterNetEvent('ef-jobreceipt:Client:ReceiptEDM')
-AddEventHandler('ef-jobreceipt:Client:ReceiptEDM', function(form)
+AddEventHandler('ef-jobreceipt:Client:ReceiptEDM',
     local playerPed = PlayerPedId()
             local input = lib.inputDialog("EDM", {
                 { type = 'input',        label = 'Seller Name',            description = 'Write your name here',               required = true, icon = 'fa-user' },

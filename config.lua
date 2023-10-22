@@ -12,7 +12,7 @@ Config.PDM = {
     heading = 219.08,
     minZ = 24.332054138184,
     maxZ = 30.332054138184,
-    Wehbhook = 'https://canary.discord.com/api/webhooks/1133034827084480573/X7l5Xo2IYFgZLQBeUHidXznUeBnHGAClY4_X3gqi9CWVj__sda7ZauRKwKI65ZcIOXKP' --- webhook here
+    Wehbhook = 'https://discord.com/api/webhooks/1133034827084480573/X7l5Xo2IYFgZLQBeUHidXznUeBnHGAClY4_X3gqi9CWVj__sda7ZauRKwKI65ZcIOXKP' --- webhook here
 }
 --- edm
 Config.EDM = {
@@ -21,7 +21,7 @@ Config.EDM = {
     heading = 245.5694,
     minZ = 24.332054138184,
     maxZ = 30.332054138184,
-    Wehbhook = 'https://canary.discord.com/api/webhooks/1133034827084480573/X7l5Xo2IYFgZLQBeUHidXznUeBnHGAClY4_X3gqi9CWVj__sda7ZauRKwKI65ZcIOXKP' --- webhook here
+    Wehbhook = 'https://discord.com/api/webhooks/1133034827084480573/X7l5Xo2IYFgZLQBeUHidXznUeBnHGAClY4_X3gqi9CWVj__sda7ZauRKwKI65ZcIOXKP' --- webhook here
 }
 --- mechanic
 Config.Mechanic = {
@@ -30,5 +30,5 @@ Config.Mechanic = {
     heading = 162.2687,
     minZ = 37.021053314209,
     maxZ = 43.021053314209,
-    Wehbhook = 'https://canary.discord.com/api/webhooks/1133034827084480573/X7l5Xo2IYFgZLQBeUHidXznUeBnHGAClY4_X3gqi9CWVj__sda7ZauRKwKI65ZcIOXKP' --- webhook here
+    Wehbhook = 'https://discord.com/api/webhooks/1133034827084480573/X7l5Xo2IYFgZLQBeUHidXznUeBnHGAClY4_X3gqi9CWVj__sda7ZauRKwKI65ZcIOXKP' --- webhook here
 }
