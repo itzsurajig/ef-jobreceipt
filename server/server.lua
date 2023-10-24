@@ -134,11 +134,11 @@ print("^2cfx.reMonitor ^2EF^7-^2JobReceipt ^2Script Made By- ^1BlasterSuraj^7 ^2
 
 
 
--- RegisterNetEvent('ef-suraj:Server:AddItem', function(item, itemData)
---     -- local src = source
---     -- local Player = QBCore.Functions.GetPlayer(src)
---     Player.Functions.AddItem(source, itemData)
--- end)
+RegisterNetEvent('ef-suraj:Server:AddItem', function(item, itemData)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    Player.Functions.AddItem(source, itemData)
+end)
 
 RegisterNetEvent('ef-reciept:surajprint', function(suraj2)
     local itemData = {
@@ -157,5 +157,5 @@ QBCore.Functions.CreateUseableItem('tablet', function(source, itemData)
     if not source then return end
     local suraj = item.info
     if item.metadata then suraj = item.metadata end
-    TriggerClientEvent('ef-jobrecieptprint', source, suraj)
+    TriggerEvent('ef-suraj:Server:AddItem', source, suraj)
 end)
