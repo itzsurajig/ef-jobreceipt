@@ -84,7 +84,7 @@ function PDMWebhook(pdmmessage)
             ["description"] = "" .. pdmmessage ..  "",
             ["footer"] = {
                 ["icon_url"] = "https://cdn.discordapp.com/attachments/1007717270241427516/1018449348633305108/Ef_productions.gif",
-                ["text"] = 'ef-jobreceipt | https://discord.gg/WbDp5GQ45t',
+                ["text"] = 'ef-jobreceipt',
             },
         }
     }
@@ -101,7 +101,7 @@ function MechanicWebhook(Mmessage)
             ["description"] = "" .. Mmessage ..  "",
             ["footer"] = {
                 ["icon_url"] = "https://cdn.discordapp.com/attachments/1007717270241427516/1018449348633305108/Ef_productions.gif",
-                ["text"] = 'ef-jobreceipt | https://discord.gg/WbDp5GQ45t',
+                ["text"] = 'ef-jobreceipt',
             },
         }
     }
@@ -118,7 +118,7 @@ function EDMWebhook(edmmessage)
             ["description"] = "" .. edmmessage ..  "",
             ["footer"] = {
                 ["icon_url"] = "https://cdn.discordapp.com/attachments/1007717270241427516/1018449348633305108/Ef_productions.gif",
-                ["text"] = 'ef-jobreceipt | https://discord.gg/WbDp5GQ45t',
+                ["text"] = 'ef-jobreceipt',
             },
         }
     }
@@ -129,33 +129,3 @@ end
 print("^2cfx.reMonitor ^2EF^7-^2JobReceipt ^2Script Made By- ^1BlasterSuraj^7 ^2 ^1https://discord.gg/WbDp5GQ45t^1")
 
 
-
-
-
-
-
-RegisterNetEvent('ef-suraj:Server:AddItem', function(item, itemData)
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-    Player.Functions.AddItem(source, itemData)
-end)
-
-RegisterNetEvent('ef-reciept:surajprint', function(suraj2)
-    local itemData = {
-        sname = suraj2[1],
-        bname = suraj2[2],
-        bcitizenid = suraj2[3],
-        vnumber = suraj2[4],
-        sellingprice = suraj2[5],
-        finance = suraj2[6],
-        financedownpay = suraj2[7]
-    }
-end)
-
-QBCore.Functions.CreateUseableItem('tablet', function(source, itemData)
-	local Player = QBCore.Functions.GetPlayer(source)
-    if not source then return end
-    local suraj = item.info
-    if item.metadata then suraj = item.metadata end
-    TriggerEvent('ef-suraj:Server:AddItem', source, suraj)
-end)

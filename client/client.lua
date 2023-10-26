@@ -3,7 +3,7 @@ QBCore = exports[Config.Corename]:GetCoreObject()
 --start
 --pdm
 RegisterNetEvent('ef-jobreceipt:Client:ReceiptPDM')
-AddEventHandler('ef-jobreceipt:Client:ReceiptPDM', function(suraj3)
+AddEventHandler('ef-jobreceipt:Client:ReceiptPDM', function(suraj)
     local playerPed = PlayerPedId()
             local input = lib.inputDialog("PDM", {
                 { type = 'input',        label = 'Seller Name',  description = 'Write your name here',               required = true, icon = 'fa-user' },
@@ -28,64 +28,13 @@ AddEventHandler('ef-jobreceipt:Client:ReceiptPDM', function(suraj3)
             })
             if Config.Emotes == "dpemotes" then TriggerEvent('animations:client:EmoteCommandStart', {"c"}) elseif Config.Emotes == "rpemotes" then exports["rpemotes"]:EmoteCommandStart("c") else print("Missing or write wrong on: Config.Emotes") end
             TriggerServerEvent('ef-jobreceipt:Server:UploadPDM', input[1], input[2], input[3], input[4], input[5], input[6], input[7])
-            TriggerServerEvent('ef-suraj:Server:AddItem')
             QBCore.Functions.Notify('Uploading Done', 'success')
             end
-            if input then
-                TriggerServerEvent('ef-reciept:surajprint', input)
-            end
 end)
-
-
-RegisterNetEvent('ef-jobrecieptprint', function(suraj)
-    lib.registerContext({
-        id = 'surajop',
-        title = 'surajop',
-        options = {
-            {
-                icon = 'fa-user',
-                title = 'Seller Name',
-                description = suraj.sname
-            },
-            {
-                icon = 'fa-user',
-                title = 'Buyer Name',
-                description = suraj.bname
-            },
-            {
-                icon = 'fa-user',
-                title = 'Buyer Citizen ID',
-                description = suraj.bcitizenid
-            },
-            {
-                icon = 'fa-user',
-                title = 'Vehicle Numbe',
-                description = suraj.vnumber
-            },
-            {
-                icon = 'fa-user',
-                title = 'Selling Price',
-                description = suraj.sellingprice
-            },
-            {
-                icon = 'fa-user',
-                title = 'Have the Buyer Finance The Vehicle ?',
-                description = suraj.finance
-            },
-            {
-                icon = 'fa-user',
-                title = 'Finance Down Payment',
-                description = suraj.financedownpay
-            }
-        }
-    })
-    lib.showContext('surajop')
-end)
- ---- sname, bname, bcitizenid, vnumber, sellingprice, finance, financedownpay
 
 ---mechanic
 RegisterNetEvent('ef-jobreceipt:Client:ReceiptMechanic')
-AddEventHandler('ef-jobreceipt:Client:ReceiptMechanic', function(form)
+AddEventHandler('ef-jobreceipt:Client:ReceiptMechanic', function(suraj)
     local playerPed = PlayerPedId()
     local input = lib.inputDialog("Mechanic", {
         { type = 'input',        label = 'Customer Name',            description = 'Write customer name here',               required = true, icon = 'fa-user' },
@@ -117,7 +66,7 @@ end)
 
 --EDM
 RegisterNetEvent('ef-jobreceipt:Client:ReceiptEDM')
-AddEventHandler('ef-jobreceipt:Client:ReceiptEDM', function(form)
+AddEventHandler('ef-jobreceipt:Client:ReceiptEDM', function(suraj)
     local playerPed = PlayerPedId()
             local input = lib.inputDialog("EDM", {
                 { type = 'input',        label = 'Seller Name',            description = 'Write your name here',               required = true, icon = 'fa-user' },
@@ -146,4 +95,4 @@ AddEventHandler('ef-jobreceipt:Client:ReceiptEDM', function(form)
             end
 end)
 
---print("^2cfx.reMonitor ^2EF^7-^2Optimization ^2Script Made By- ^1EF-PRODUCTIONS^7 ^2 ^1https://discord.gg/WbDp5GQ45t^1")
+print("^2cfx.reMonitor ^2EF^7-^2JobReceipt ^2Script Made By- ^1BlasterSuraj^7 ^2 ^1https://discord.gg/WbDp5GQ45t^1")
