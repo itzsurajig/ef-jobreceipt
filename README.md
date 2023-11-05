@@ -16,7 +16,7 @@ Step 1.  Drag and drop in resource folder.
 
 Step 2. Paste Your Discord webhook in config file.
 
-Step 3. Install [ox_lib](https://github.com/overextended/ox_lib)
+Step 3. Install [ox_lib](https://github.com/overextended/ox_lib) and ensure `ox_lib`
 
 Step 3. ensure `ef-jobreciept`
 
