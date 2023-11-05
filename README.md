@@ -17,7 +17,8 @@ Step 3. ensure `ef-jobreciept`
 
 # easy Config
 <h4>Example</h4>
-```
+
+```lua
 Config.PDM = {
     job = 'cardealer',   --- job name
     Location = vector3(-56.86, -1096.98, 26.42),
