@@ -3,25 +3,25 @@ QBCore = exports[Config.Corename]:GetCoreObject()
 RegisterServerEvent('ef-jobreceipt:Server:UploadPDM')
 AddEventHandler('ef-jobreceipt:Server:UploadPDM', function(sname, bname, bcitizenid, vnumber, sellingprice, finance, financedownpay)
     PDMWebhook (
-        "Seller Name: " .. sname ..
+        "**Seller Name:** " .. sname ..
         "\n" ..
         "\n" ..
-        "Buyer Name: " .. bname ..
+        "**Buyer Name:** " .. bname ..
         "\n" ..
         "\n" ..
-        "Buyer Citizen ID: " .. bcitizenid ..
+        "**Buyer Citizen ID:** " .. bcitizenid ..
         "\n" ..
         "\n" ..
-        "Vehicle Number: " .. vnumber ..
+        "**Vehicle Number:** " .. vnumber ..
         "\n" ..
         "\n" ..
-        "Selling Price: " .. sellingprice ..
+        "**Selling Price:** " .. sellingprice ..
         "\n" ..
         "\n" ..
-        "Have the Buyer Finance The Vehicle ? " .. finance ..
+        "**Have the Buyer Finance The Vehicle ?** " .. finance ..
         "\n" ..
         "\n" ..
-        "Finance Down Payment " .. financedownpay
+        "**Finance Down Payment:** " .. financedownpay
         )
 end)
 --mechanic
@@ -43,7 +43,7 @@ AddEventHandler('ef-jobreceipt:Server:UploadMechanic', function(cname, vname, ci
         "Vehicle Repair Cost: " .. rcost ..
         "\n" ..
         "\n" ..
-        "Vehicle Customize Cost: " .. custcost .. 
+        "Vehicle Customize Cost: " .. custcost ..
         "\n" ..
         "\n" ..
         "Mechainc Name: " .. mname
@@ -88,7 +88,7 @@ function PDMWebhook(pdmmessage)
             },
         }
     }
-    PerformHttpRequest(Config.PDM.Wehbhook, 
+    PerformHttpRequest(Config.PDM.Wehbhook,
     function(err, text, headers) end, 'POST', json.encode({username = 'ef-jobreceipt - PDM Logs', embeds = embed}), { ['Content-Type'] = 'application/json' })
 end
 ---MECHANIC
@@ -105,7 +105,7 @@ function MechanicWebhook(Mmessage)
             },
         }
     }
-    PerformHttpRequest(Config.MechanicWebhook.Wehbhook, 
+    PerformHttpRequest(Config.Mechanic.Wehbhook,
     function(err, text, headers) end, 'POST', json.encode({username = 'ef-jobreceipt - Mechanic Logs', embeds = embed}), { ['Content-Type'] = 'application/json' })
 end
 --EDM webhook
@@ -122,7 +122,7 @@ function EDMWebhook(edmmessage)
             },
         }
     }
-    PerformHttpRequest(Config.EDMWebhook.Wehbhook, 
+    PerformHttpRequest(Config.EDMWebhook.Wehbhook,
     function(err, text, headers) end, 'POST', json.encode({username = 'ef-jobreceipt - EDM Logs', embeds = embed}), { ['Content-Type'] = 'application/json' })
 end
 
