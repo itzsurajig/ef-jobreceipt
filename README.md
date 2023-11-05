@@ -9,6 +9,8 @@ This script is a valuable addition to your FiveM server, specifically designed f
 # Free Download
 # [Tebex](https://ef-productions.tebex.io/package/5982822)
 
+[YouTube Preview](https://www.youtube.com/watch?v=aahFVvQSp-w)
+
 # Installation
 Step 1.  Drag and drop in resource folder.
 
