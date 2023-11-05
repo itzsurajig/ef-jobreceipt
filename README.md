@@ -3,8 +3,7 @@ This script is a valuable addition to your FiveM server, specifically designed f
 
 <br>
 
-![ef-jobreciept](https://github.com/blastersuraj/ef-jobreceipt/assets/104319683/3e2394e6-3e0d-405b-b0ec-f122a407a034)
-
+https://cdn.discordapp.com/attachments/945026120414294047/1170852800499032204/ef-jobreciept.png?ex=655a8ca5&is=654817a5&hm=3b88659a37f3b9c77cbb465cead4471d538dc57c61f7715c5b155a0051a7601d&
 
 # Free Download
 # [Tebex](https://ef-productions.tebex.io/package/5982822)
