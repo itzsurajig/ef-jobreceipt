@@ -5,4 +5,4 @@ This script is a valuable addition to your FiveM server, specifically designed f
 <br>
 
 # Free Download
-[# Tebex](https://ef-productions.tebex.io/package/5982822)
+# [Tebex](https://ef-productions.tebex.io/package/5982822)
