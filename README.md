@@ -30,8 +30,8 @@ Config.PDM = {
     Wehbhook = '' --- webhook here
 }
 ```
-![pdm](https://github.com/blastersuraj/ef-jobreceipt/assets/104319683/19ef5061-2ab6-4003-bced-d7b1f358b41e)
-![mech](https://github.com/blastersuraj/ef-jobreceipt/assets/104319683/8ea2b0af-4af0-40fe-9422-6a0d7dea1b33)
+![pdm](https://cdn.discordapp.com/attachments/945026120414294047/1170842564723753111/image.png?ex=655a831c&is=65480e1c&hm=8a12a023a32e42d9d83247ceeb82b7db8a2a440c3cfb7ac25bc584b49fc106dc&)
+![mech](https://cdn.discordapp.com/attachments/945026120414294047/1170842928114061392/image.png?ex=655a8373&is=65480e73&hm=98582fc3997b27a7ebe6cddd6bc7f0a00a552e6a6b70505779a0bbf636d959a4&)
 
 
 
