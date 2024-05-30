@@ -3,7 +3,8 @@ This script is a valuable addition to your FiveM server, specifically designed f
 
 <br>
 
-![Main](https://cdn.discordapp.com/attachments/945026120414294047/1170852800499032204/ef-jobreciept.png)
+![ef-jobreciept](https://github.com/itzsurajig/ef-jobreceipt/assets/104319683/82536780-ff8e-4ff2-9a66-386c610e5878)
+
 
 
 # Free Download
@@ -34,8 +35,6 @@ Config.PDM = {
     Wehbhook = '' --- webhook here
 }
 ```
-![pdm](https://cdn.discordapp.com/attachments/945026120414294047/1170842564723753111/image.png?ex=655a831c&is=65480e1c&hm=8a12a023a32e42d9d83247ceeb82b7db8a2a440c3cfb7ac25bc584b49fc106dc&)
-![mech](https://cdn.discordapp.com/attachments/945026120414294047/1170842928114061392/image.png?ex=655a8373&is=65480e73&hm=98582fc3997b27a7ebe6cddd6bc7f0a00a552e6a6b70505779a0bbf636d959a4&)
 
 
 
